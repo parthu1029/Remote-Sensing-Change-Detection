@@ -53,7 +53,7 @@ Change Detection in Remote Sensing Satellite Images/
 
 The following diagram shows the data pipeline during training:
 
-![Data Flow](img/img1.png)
+![Data Flow](img/img1.jpg)
 
 ---
 
@@ -69,7 +69,7 @@ Each model processes 6-channel input images and outputs segmentation maps.
 
 **Architecture Diagram:**
 
-![Architecture](img/img2.png)
+![Architecture](img/img2.jpg)
 
 ---
 
