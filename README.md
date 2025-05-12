@@ -182,10 +182,28 @@ Install them with:
 ```
 pip install -r requirements.txt
 ```
-📄 License
-```
-This project is open-source and available under the MIT License.
-```
+
+## 📄 License
+
+This project is open-source and available under the **MIT License**.
+
+---
+
+## 👥 Contributors
+
+- **Parthasaradhi G**  
+  GitHub: [@parthu1029](https://github.com/parthu1029)  
+  Role: Project Author & Developer
+
+- **Siddardha S**  
+  GitHub: [@tmfsiddu](https://github.com/tmfsiddu)  
+  Role: Contributor / Collaborator
+
+- **Sujith B**  
+  GitHub: [@sujith-2424](https://github.com/sujith-2424)  
+  Role: Contributor / Collaborator
+---
+
 
 
 Feel free to open an issue or reach out for questions, collaborations, or feedback.
