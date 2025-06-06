@@ -9,10 +9,10 @@ This repository contains three CNN-based models (`U-Net`, `U-Net with ResNet`, a
 We implement and compare the following models:
 
 - **Model 1**: Basic U-Net variant
-- **Model 2**: U-Net with residual connections
-- **Model 3**: U-Net with attention blocks
+- **Model 2**: U-Net with ResNet as encoder
+- **Model 3**: U-Net with DenseNet as encoder
 
-Each model is evaluated on segmentation tasks using custom loss functions (`combo_loss`, `focal loss`, `dice loss`) and metrics like `IoU`, `True Positive Rate`, and `Accuracy`.
+Each model is evaluated on segmentation tasks using custom loss functions (combination of `focal loss`, `dice loss`) and metrics like `IoU`, `True Positive Rate`, and `Accuracy`.
 
 ---
 
@@ -127,7 +127,7 @@ Place training and validation images in:
   dataset/
     ├──train/
     │    ├──A/
-    │   ├──B/
+    │    ├──B/
     │    └──label/
     ├──val/
     │    ├──A/
@@ -175,7 +175,6 @@ albumentations
 tqdm
 pandas
 h5py
-pytest
 ```
 
 Install them with:
