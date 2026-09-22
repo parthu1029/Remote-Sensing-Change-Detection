@@ -33,3 +33,19 @@ def true_positive_rate(y_true, y_pred):
     true_positives = tf.reduce_sum(y_true * y_pred)
     actual_positives = tf.reduce_sum(y_true)
     return true_positives / (actual_positives + 1e-6)
+
+# F1 Score
+def f1_score(y_true, y_pred):
+    y_pred = tf.cast(y_pred > 0.5, tf.float32)
+    y_true = tf.cast(y_true, tf.float32)
+
+    y_true = tf.squeeze(y_true)
+    y_pred = tf.squeeze(y_pred)
+
+    true_positives = tf.reduce_sum(y_true * y_pred)
+    false_positives = tf.reduce_sum((1 - y_true) * y_pred)
+    false_negatives = tf.reduce_sum(y_true * (1 - y_pred))
+
+    return (2 * true_positives) / (
+        2 * true_positives + false_positives + false_negatives + 1e-6
+    )

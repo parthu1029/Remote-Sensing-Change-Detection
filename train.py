@@ -1,7 +1,7 @@
 import tensorflow as tf
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint, ReduceLROnPlateau, CSVLogger
 from losses.loss import combo_loss
-from metrics.metrics import iou_metric, true_positive_rate, accuracy_metric
+from metrics.metrics import iou_metric, true_positive_rate, accuracy_metric,f1_score
 
 # Example to set up your training
 def train(model, train_generator, val_generator, learning_rate=1e4, epoches = 50):
@@ -16,7 +16,7 @@ def train(model, train_generator, val_generator, learning_rate=1e4, epoches = 50
     
      # Set up your custom metrics and loss function
     model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=learning_rate), 
-                  loss=combo_loss, metrics=[iou_metric, true_positive_rate, accuracy_metric])
+                  loss=combo_loss, metrics=[iou_metric, true_positive_rate, accuracy_metric,f1_score])
     
     history = model.fit(
         train_generator,
